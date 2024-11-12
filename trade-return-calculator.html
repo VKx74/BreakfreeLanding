@@ -1,0 +1,691 @@
+<!DOCTYPE html><!--  Last Published: Tue Nov 12 2024 21:27:25 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6733c2d59d1e6aa9f5df265e" data-wf-site="6733c2d59d1e6aa9f5df25db">
+<head>
+  <meta charset="utf-8">
+  <title>Trade Return Calculator</title>
+  <meta content="Quickly simulate 100s of trades across different risks, balances, win/loss ratios, and probability of trade outcomes." name="description">
+  <meta content="Trade Return Calculator" property="og:title">
+  <meta content="Quickly simulate 100s of trades across different risks, balances, win/loss ratios, and probability of trade outcomes." property="og:description">
+  <meta content="Trade Return Calculator" property="twitter:title">
+  <meta content="Quickly simulate 100s of trades across different risks, balances, win/loss ratios, and probability of trade outcomes." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/breakfree-trading-a358d7-8c5a8126d34bc3.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","IBM Plex Mono:regular,600,700","Noto Sans:300,regular,italic,500,500italic,600,700,800"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+select, input, textarea { 
+  -webkit-appearance: none;
+}
+</style>
+  <script>(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');</script>
+  <script async="" src="https://r.wdfl.co/rw.js" data-rewardful="db7cd4"></script>
+</head>
+<body class="body-2">
+  <article class="navbar-wrapper">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner" class="navbar active w-nav">
+      <div class="navbar-row">
+        <div class="navbar-logo-wrapper">
+          <a href="index.html" class="navbar-logo-link w-inline-block"><img src="images/Untitled-design-11.png" loading="lazy" width="33" alt="" class="navbar-logo-image"></a>
+        </div>
+        <a href="https://www.breakfree.cc/neural-signup" class="button bordered checkout hiddenmobile hidecorrect hiddendesktoplol w-inline-block">
+          <div class="text-block-55">7 Day Trial</div>
+        </a>
+        <div class="div-block-228 hiddenabovetab">
+          <a href="neural-signup.html" class="button bordered checkout hiddenmobile hidecorrect hidden w-inline-block">
+            <div class="text-block-55">Order Neural </div>
+          </a>
+          <div class="menu-button w-nav-button">
+            <div class="menu-button-wrapper">
+              <div class="menu-button-horziontal">
+                <div class="menu-button-horizontal-line line-1"></div>
+                <div class="menu-button-horizontal-line line-2"></div>
+                <div class="menu-button-horizontal-line line-3"></div>
+              </div>
+              <div class="menu-button-cross">
+                <div class="menu-button-cross-line line-1"></div>
+                <div class="menu-button-cross-line line-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation" class="main-menu hiddenmobile w-nav-menu">
+          <div class="nav-link-wrapper hiddenmobile">
+            <a href="signup.html" class="nav-link w-nav-link">Pricing</a>
+          </div>
+          <div class="nav-link-wrapper hiddenmobile">
+            <a href="changelog.html" class="nav-link w-nav-link">Latest</a>
+          </div>
+          <div class="nav-link-wrapper hiddenmobile">
+            <a href="backtest-results.html" class="nav-link w-nav-link">Performance</a>
+          </div>
+          <div class="nav-link-wrapper hiddenmobile">
+            <a href="https://breakfree.getrewardful.com/signup" class="nav-link w-nav-link">Affiliate</a>
+          </div>
+        </nav>
+        <nav role="navigation" class="cta-get-started hiddenmobile w-nav-menu">
+          <div class="nav-link-wrapper hiddendesk">
+            <a href="neural-signup.html" class="nav-link support-button w-nav-link">Pricing</a>
+          </div>
+          <div class="nav-link-wrapper hiddendesk">
+            <a href="changelog.html" class="nav-link support-button w-nav-link">Latest Changes</a>
+          </div>
+          <div class="nav-link-wrapper hiddendesk">
+            <a href="backtest-results.html" class="nav-link support-button w-nav-link">Backtest Results</a>
+          </div>
+          <div class="nav-link-wrapper">
+            <a href="https://breakfree.sh" class="nav-link w-nav-link">Log in</a>
+          </div>
+          <a href="https://www.breakfree.sh" class="button bordered checkout hiddenmobile hidecorrect w-inline-block">
+            <div class="text-block-55">7 Day Trial</div>
+          </a>
+        </nav>
+      </div>
+      <a href="neural-agent-3-19.html" class="width100 w-inline-block">
+        <div id="element444" class="announcement-2 hidden">
+          <div class="earlyaccessoffer">Neural Agent 3.19 Exclusive Offer:</div>
+          <div class="countdowndiv-2 top">
+            <div class="div-block-269 top">
+              <div id="days2" class="timeval">7</div>
+              <div class="timetext top">D</div>
+              <div id="hours2" class="timeval">00</div>
+              <div class="timetext top">H</div>
+              <div id="minutes2" class="timeval">00</div>
+              <div class="timetext top">M</div>
+              <div id="seconds2" class="timeval">00</div>
+              <div class="timetext top">S</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </article>
+  <a href="neural.html" class="announce w-inline-block">
+    <div class="text-block-101">Full Service Trading Agent - Extract up to 2% Profit A Day.</div>
+  </a>
+  <div class="container---main tradet">
+    <div class="div-block-231">
+      <h1 class="tradeturnheader">Trade Return Calculator</h1>
+      <p class="traderturn">The Trade Return Calculator enables you to visualize 100 simulated trades based on your existing or desired performance metrics. <br></p>
+    </div>
+    <div class="w-container">
+      <div class="div-block-240">
+        <div class="div-block-243">
+          <div class="div-block-244">
+            <div class="text-block guide"><img src="images/circle-info-sharp-regular.svg" loading="lazy" alt="" class="image-29">
+              <div class="text-block-98"><strong>Balance </strong>= This represents your initial account balance.<br></div>
+            </div>
+            <div class="text-block guide"><img src="images/circle-info-sharp-regular.svg" loading="lazy" alt="" class="image-29">
+              <div class="text-block-98"><strong>Typical Risk</strong> = Input the percentage of your account that you commonly risk for each trade. For instance, if you usually risk 2% of your capital, type in &quot;2.&quot; <br></div>
+            </div>
+            <div class="text-block guide"><img src="images/circle-info-sharp-regular.svg" loading="lazy" alt="" class="image-29">
+              <div class="text-block-98"><strong>Risk-to-Reward Ratio</strong> = Provide the risk-to-reward ratio you usually aim for.<br>If you generally target a minimum ratio of 1:2, then input &quot;2.&quot; <br>Risking 1 USD for 2 USD reward.<br></div>
+            </div>
+            <div class="text-block guide"><img src="images/circle-info-sharp-regular.svg" loading="lazy" alt="" class="image-29">
+              <div class="text-block-98"><strong>Win-to-Loss Ratio</strong> = Insert the percentage of trades you typically win. For example, if about 53% of your trades are profitable, type in &quot;53.&quot;<br></div>
+            </div>
+          </div>
+        </div>
+        <div class="div-block-241">
+          <div class="text-block header">Are you tired of losing in trading?</div>
+          <div class="text-block x">The issue isn&#x27;t your strategy; it&#x27;s human error.<br><br>It is a human trap to do manual trading in financial markets.<br>‍<br>Stop feeding the machine.<br></div>
+          <div class="vidholder return hidden">
+            <div style="padding-top:75%" class="video-11 w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2Fao9tjsb1si&display_name=Wistia%2C+Inc.&url=https%3A%2F%2Fbreakfreetrading.wistia.com%2Fmedias%2Fao9tjsb1si&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Fdf2501b5874470f47b9ad204bcdd3a4a6acba1bd.jpg%3Fimage_crop_resized%3D960x960&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=wistia" scrolling="no" allowfullscreen="" title="square youtube adx - 1080WebShareName"></iframe></div>
+          </div>
+          <div class="text-block bold x">Start extracting profits using your own machine.</div>
+          <a href="index.html" class="button bordered checkout new pricingcta x riskfree calc w-inline-block">
+            <div class="s">Start Trading Using Bot</div><img src="images/arrow-right-long-light.svg" loading="lazy" alt="" class="arrowr f x">
+          </a>
+        </div>
+      </div>
+      <div id="results" class="black-background-2">
+        <div id="return-chart" class="chart-container-2">
+          <div class="text-block-97">Waiting for input...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div id="w-node-_25f36f06-098f-ff02-c26d-2ceb53178d27-f5df265e" class="w-layout-layout quick-stack-7 wf-layout-layout">
+      <div id="w-node-_25f36f06-098f-ff02-c26d-2ceb53178d28-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Maximize Your Forex Profits with Our Comprehensive Trade Return Calculator</h4>
+          <p class="infopara4">Navigating the world of forex trading can be challenging, especially when it comes to calculating potential profits or losses. Whether you&#x27;re day trading or working with long-term investments, having the right tools can make a world of difference. That&#x27;s where our advanced Trade Return Calculator comes in handy.</p>
+        </div>
+      </div>
+      <div id="w-node-_951e657c-d22f-533a-291b-cd0743984f44-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Profit and Loss Calculator: The One-Stop Solution</h4>
+          <p class="infopara4">For traders looking for precision, our forex profit loss calculator provides an all-in-one solution. It goes beyond a simple day trading profit calculator, offering an array of features for forex traders. With options like a forex pip calculator profit tool and a win/loss trade calculator, it&#x27;s more than just a basic trading calc.</p>
+        </div>
+      </div>
+      <div id="w-node-_96c16b69-60b9-713b-9442-4cebcd8edf65-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Risk Reward Calculator: Assess Before You Invest</h4>
+          <p class="infopara4">Our calculator trading features also include a specialized forex risk reward calculator. This tool can help you make informed decisions by balancing your trading strategy settings against potential returns, contributing to trading account growth over time.</p>
+        </div>
+      </div>
+      <div id="w-node-a8a397bd-cea7-8f1d-93be-90c17fa6b10e-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Pip Profit Calculator: Detail is the Key</h4>
+          <p class="infopara4">If you&#x27;re someone who pays attention to the details, then our forex pip profit calculator is just what you need. Don&#x27;t just calculate trade outcomes; dissect them to understand how each pip movement can affect your forex profits. With our tool, you can easily calculate forex profit down to the last decimal.</p>
+        </div>
+      </div>
+      <div id="w-node-f37ee83a-939e-326f-5f7f-e2165b3bd3e8-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Time Calculator: Timing is Everything</h4>
+          <p class="infopara4">Our forex time calculator allows traders to forecast potential gains or losses based on various timeframes. Whether you&#x27;re into day trading, swing trading, or long-term trading, you can plan ahead with confidence.</p>
+        </div>
+      </div>
+      <div id="w-node-_85f3ac5d-912e-faee-b7c8-a42b15e44908-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Leverage Profit Calculator: Understand the Power and Risks</h4>
+          <p class="infopara4">Leverage can be a double-edged sword. Use our leverage profit calculator to gauge the potential rewards and risks before committing to trades involving high leverage.</p>
+        </div>
+      </div>
+      <div id="w-node-cde2d0e9-e39f-f5d5-44b5-0bb5d2328e54-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Gold Calculator: Diversify with Confidence</h4>
+          <p class="infopara4">For those interested in diversifying their portfolio, our forex gold calculator can help evaluate potential returns when trading this precious metal against various currencies.</p>
+        </div>
+      </div>
+      <div id="w-node-_422bf3eb-e587-0e01-99ea-b08861722e05-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Day Trading Calculator: Tools for the Fast-Paced Trader</h4>
+          <p class="infopara4">Our day trading calculator comes with features like profit factor calculator and win rate calc to help you monitor your strategies in real-time. Take control of your daytrading activities and maximize your trading returns.</p>
+        </div>
+      </div>
+      <div id="w-node-_9e0234bc-cceb-7214-499b-2ca291031a59-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Profit Tool: The Ultimate Profitcalculator for Traders</h4>
+          <p class="infopara4">From calculadora trading in Spanish to a specialized eurusd profit calculator, we have designed our tool to be the ultimate profit calculator for traders worldwide. Get precise readings, from short return calculations to 1 percent profit per day calculations, all under one roof.</p>
+        </div>
+      </div>
+      <div id="w-node-_642a8a48-4631-9f04-2e59-5d7bd04d3803-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Commission Calculator: Keep Track of Trading Costs</h4>
+          <p class="infopara4">Don&#x27;t let commissions eat into your profits. Use our forex commission calculator to keep tabs on your expenses and maintain a healthy bottom line.</p>
+        </div>
+      </div>
+      <div id="w-node-d62e1a29-7b84-4d95-cec8-862218d75ac4-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Trading Strategy Settings Calculator: Optimize Your Moves</h4>
+          <p class="infopara4">Fine-tune your trading strategy with our Trading Strategy Settings Calculator. This feature enables you to adjust your approach based on real-time data, helping to optimize your trading returns.</p>
+        </div>
+      </div>
+      <div id="w-node-_88e95d10-95a7-ce69-fedd-16c0089c38c1-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Forex Cal: Your Personalized Forex Calendar</h4>
+          <p class="infopara4">In forex trading, timing isn&#x27;t just about the clock; it&#x27;s also about the calendar. Our &#x27;Forex Cal&#x27; feature gives you a forex-specific calendar, showing important dates and events that could affect market behavior.</p>
+        </div>
+      </div>
+      <div id="w-node-_8c86f8bd-90f1-1e23-a945-dc43c8b0d56d-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Trading Calculators: A Suite of Tools at Your Fingertips</h4>
+          <p class="infopara4">We don’t offer just one trading calculator; we offer an entire suite of trading calculators. From calculating short and long profits to gauging win rates, our array of tools ensures that you&#x27;re fully equipped to trade effectively.</p>
+        </div>
+      </div>
+      <div id="w-node-a373d697-9905-e4bc-cde8-bbae537ec900-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">ForexProfit: Your Profit, Simplified</h4>
+          <p class="infopara4">Our &quot;ForexProfit&quot; feature streamlines the way you calculate profit in forex trading. Simplified yet precise, this feature provides a clear look at your trading gains without the clutter.</p>
+        </div>
+      </div>
+      <div id="w-node-cf20fd6d-36ac-fedc-0c11-5ba7d05a4b48-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">FX Profit Calculator: Broaden Your Trading Horizon</h4>
+          <p class="infopara4">Besides forex, if you&#x27;re also dabbling in other financial markets, our FX Profit Calculator can help you expand your trading strategies while keeping track of potential profits.</p>
+        </div>
+      </div>
+      <div id="w-node-_41618c6f-fc6f-03d1-2c9f-6b52f700d6f5-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Win Rate Calculator: Measure Your Success</h4>
+          <p class="infopara4">Don’t rely on guesswork. Use our win rate calculator to objectively measure the success rate of your trading strategies over time. Understand your strengths and weaknesses to trade smarter.</p>
+        </div>
+      </div>
+      <div id="w-node-_4b862c36-2bf4-1864-1a36-cfcbe6774516-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Calculate Profit Forex: Quick and Accurate</h4>
+          <p class="infopara4">Need to know your profit in a jiffy? Our &#x27;Calculate Profit Forex&#x27; tool gives you quick and accurate profit calculations, helping you make timely decisions.</p>
+        </div>
+      </div>
+      <div id="w-node-fea5a297-94c7-4dc7-97cc-7c44e40bbe55-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">My FX Calculator: Personalized Calculations</h4>
+          <p class="infopara4">The &#x27;My FX Calculator&#x27; feature allows for a more personalized experience, saving your trading settings and preferences for future calculations.</p>
+        </div>
+      </div>
+      <div id="w-node-af8dfcbd-28be-1bfd-1b17-22d90049e8af-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">1 Percent Profit Per Day Calculator: Small Gains, Big Results</h4>
+          <p class="infopara4">If you aim to grow your trading account steadily, our &#x27;1 Percent Profit Per Day Calculator&#x27; can help you set and achieve realistic financial goals over time.</p>
+        </div>
+      </div>
+      <div id="w-node-_8cd0c17b-aad2-ad43-b1bb-92518958e61b-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">PnL Calculator: Profit and Loss Made Easy</h4>
+          <p class="infopara4">Want to know how your trades fare? Our PnL Calculator gives you an overview of your profits and losses, making it easier to evaluate your trading performance.</p>
+        </div>
+      </div>
+      <div id="w-node-_2057475e-8705-4353-ab8a-b1e4376e2719-f5df265e" class="w-layout-cell">
+        <div class="info-holder">
+          <h4 class="infohead4">Calc Profit: Quick and Easy Calculations</h4>
+          <p class="infopara4">For those who prefer a no-frills, straightforward approach, our &#x27;Calc Profit&#x27; feature gives you the essentials in a simplified format.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container---main">
+      <div class="curved-pattern-section">
+        <div class="line"></div>
+        <div class="justify-between">
+          <div class="container---l padded-top">
+            <div class="rows gap-2 align-left">
+              <h4 class="large-heading">Extract money from volatility with AI-powered precision today. <br></h4>
+              <a href="https://navigator.breakfreetrading.com/#/auth/registration" class="button w-inline-block">
+                <div>Start Now</div>
+              </a>
+            </div>
+          </div>
+          <div class="curve-pattern hug-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container---main">
+      <div class="footer-columns">
+        <div class="container---xs footer-left-column">
+          <a href="old-home-6.html" class="w-inline-block"><img src="images/navlogo.PNG" loading="lazy" alt="" class="image"></a>
+        </div>
+        <div class="container---m footer-container">
+          <div class="rows gap-4">
+            <div class="w-layout-grid footer-menus">
+              <div class="rows gap-0-25 links">
+                <h5 class="footer-heading">Pages</h5>
+                <a href="old-home-6.html" class="hover-link">Home</a>
+                <a href="backtest-results.html" class="hover-link">Trading Models &amp; Backtest results</a>
+                <a href="about.html" class="hover-link">About</a>
+                <a href="contact.html" class="hover-link">Contact</a>
+              </div>
+              <div class="rows gap-0-25 links">
+                <h5 class="footer-heading">Links</h5>
+                <a href="https://navigator.breakfreetrading.com/" target="_blank" class="hover-link">Login</a>
+                <a href="changelog.html" class="hover-link">Changelog</a>
+                <a href="docs/privacy-policy.html" class="hover-link">Privacy Policy</a>
+                <a href="docs/terms-conditions.html" class="hover-link">Terms &amp; Conditions</a>
+              </div>
+            </div>
+            <div class="small-text"><br>Breakfree Trading is dedicated to empowering people with the tools they need for financial freedom. By harnessing the power of advanced AI and trading technologies, we transform market volatility into a wealth of opportunities, unlocking the door to financial success and Freedom.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loading-container"><img src="images/loader.svg" loading="eager" alt="" class="loader"></div>
+  <div class="black-background w-embed w-script">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+let myChart = null;
+function plotReturnChart(tradeResults) {
+    const chartElement = document.getElementById('return-chart');
+    // Check if the canvas element is available
+    if (chartElement) {
+        const ctx = chartElement.getContext('2d');
+        // Prepare data for the chart
+        const labels = tradeResults.map(result => result.tradeNo);
+        const data = tradeResults.map(result => result.balance);
+        // If the chart exists, destroy it before creating a new one
+        if (myChart) {
+            myChart.destroy();
+        }
+        // Create the chart
+        myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Trade Return',
+                    data: data,
+                    borderColor: 'rgba(255, 255, 255, 1)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    borderWidth: 1,
+                    pointRadius: 2,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: 'white'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: 'white'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        titleColor: 'black',
+                        bodyColor: 'black'
+                    }
+                },
+                maintainAspectRatio: false
+            }
+        });
+    }
+}
+function removePercentageSign(value) {
+    return value.replace(/%/g, '');
+}
+function getInputValueWithDefault(inputElement) {
+    const inputValue = inputElement.value;
+    const defaultValue = inputElement.getAttribute('placeholder');
+    return inputValue === '' ? defaultValue : inputValue;
+}
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('calculate-btn').addEventListener('click', function () {
+        const balanceInput = document.getElementById('balance');
+        const typicalRiskInput = document.getElementById('typical-risk');
+        const riskRewardInput = document.getElementById('risk-reward');
+        const winLossInput = document.getElementById('win-loss');
+        const numberOfTradesInput = document.getElementById('number-of-trades');
+        const balance = parseFloat(getInputValueWithDefault(balanceInput));
+        const typicalRisk = parseFloat(removePercentageSign(getInputValueWithDefault(typicalRiskInput))) / 100;
+        const riskReward = parseFloat(getInputValueWithDefault(riskRewardInput));
+        const winLoss = parseFloat(removePercentageSign(getInputValueWithDefault(winLossInput))) / 100;
+        const numberOfTrades = parseInt(getInputValueWithDefault(numberOfTradesInput));
+        let results = [];
+        let newBalance = balance;
+        for (let i = 0; i < numberOfTrades; i++) { // Use the value in the loop
+            const tradeResult = Math.random() <= winLoss ? newBalance * typicalRisk * riskReward : -newBalance * typicalRisk;
+            newBalance += tradeResult;
+            results.push({ tradeNo: i + 1, balance: newBalance, profitLoss: tradeResult });
+        }
+    const finalBalance = results[results.length - 1].balance;
+    const percentageReturn = ((finalBalance - balance) / balance) * 100;
+    let resultHTML = `
+    <h2>Results</h2>
+    <p>Account Start: ${balance.toFixed(2)}</p>
+    <p>End Total: ${finalBalance.toFixed(2)}</p>
+    <p>% Return: ${percentageReturn.toFixed(2)}%</p>
+    <h3>Trade Return Chart</h3>
+    <div id="chart-container">
+    <canvas id="return-chart" class="black-background"></canvas>
+    </div>
+    <table>
+        <tr>
+            <th>Trade No</th>
+            <th>Balance</th>
+            <th>P/L</th>
+            <th>New Balance</th>
+        </tr>
+`;
+    results.forEach(result => {
+        resultHTML += `
+            <tr>
+                <td>${result.tradeNo}</td>
+                <td>${result.balance.toFixed(2)}</td>
+                <td>${result.profitLoss.toFixed(2)}</td>
+                <td>${(result.balance + result.profitLoss).toFixed(2)}</td>
+            </tr>
+        `;
+    });
+    resultHTML += '</table>';
+   // Update the innerHTML with resultHTML
+   document.getElementById('results').innerHTML = resultHTML;
+   // Call the plotReturnChart function directly after updating the innerHTML
+   plotReturnChart(results);
+});
+});
+</script>
+    <style>
+    body {
+        background-color: black;
+        color: #FFF;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        color: #FFF;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #666;
+    }
+    th {
+        background-color: #333;
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #444;
+    }
+    tr:hover {
+        background-color: #555;
+    }
+</style>
+  </div>
+  <div data-animation="default" data-collapse="small" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-copy bottombar w-nav">
+    <div class="navbar-row bottombar">
+      <nav role="navigation" class="cta-get-started hiddenmobile cta-neural w-nav-menu">
+        <a href="neural.html" class="button bordered checkout hiddenmobile cta w-inline-block">
+          <div class="text-block-55">Learn About Neural Agent </div>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6733c2d59d1e6aa9f5df25db" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/breakfree-trading-a358d7-8c5a8126d34bc3.js" type="text/javascript"></script><!--  add background on scroll to navbar  -->
+  <script>
+	/* check if navbar exists (to avoid js console errors) */
+  let exists = $( ".navbar" ).length ? true : false;
+  /* if user scroll add active class */
+  $(window).on("scroll", function() {
+    if(exists && $(window).scrollTop() > 0) {
+      $(".navbar").addClass("active");
+    } else if(exists) {
+      /* remove active class */
+      $(".navbar").removeClass("active");
+    }
+  });
+</script>
+  <script>
+  window.intercomSettings = {
+    api_base: "https://api-iam.intercom.io",
+    app_id: "sv09ttz9"
+  };
+</script>
+  <script>
+    var supportButtons = document.getElementsByClassName('support-button');
+    function onClickSupportButton() {
+        if (!window.Intercom) {
+            var APP_ID = "sv09ttz9";
+            window.intercomSettings = {
+                app_id: APP_ID
+            };
+            (function () {
+                var w = window;
+                var ic = w.Intercom;
+                if (typeof ic === "function") {
+                    ic('reattach_activator');
+                    ic('update', w.intercomSettings);
+                } else {
+                    var d = document;
+                    var i = function () {
+                        i.c(arguments);
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                        i.q.push(args);
+                    };
+                    w.Intercom = i;
+                    var l = function () {
+                        var s = d.createElement('script');
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = 'https://widget.intercom.io/widget/' + APP_ID;
+                        var x = d.getElementsByTagName('script')[0];
+                        x.parentNode.insertBefore(s, x);
+                    };
+                    if (document.readyState === 'complete') {
+                        l();
+                    } else if (w.attachEvent) {
+                        w.attachEvent('onload', l);
+                    } else {
+                        w.addEventListener('load', l, false);
+                    }
+                }
+            })();
+            window.Intercom('boot', {
+                app_id: APP_ID
+            });
+        }
+        window.Intercom('show');
+    }
+    if (supportButtons) {
+        for (var i = 0; i < supportButtons.length; i++) {
+            supportButtons[i].addEventListener('click', onClickSupportButton);
+        }
+    }
+</script>
+  <script>
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+    let countDown1 = new Date('November 19, 2024 23:59:59 GMT+7').getTime(),
+        countDown2 = new Date('January 23, 2024 23:59:59 GMT+7').getTime(),
+        countDown3 = new Date('January 23, 2024 23:59:59 GMT+7').getTime(); // Added third countdown
+    let x = setInterval(function() {
+        let now = new Date().getTime();
+        updateCountdown(now);
+    }, second);
+    function updateCountdown(now) {
+        let distance = countDown1 - now;
+        if (distance < 0) {
+            // First countdown has finished, start second countdown
+            distance = countDown2 - now;
+            if (distance < 0) {
+                // Second countdown has finished, start third countdown
+                distance = countDown3 - now;
+                if (distance < 0) {
+                    // Third countdown has finished
+                    clearInterval(x);
+                    updateDisplayForEndOfCountdown();
+                    return;
+                }
+            }
+        }
+        // Update countdown display
+        updateElement('days', Math.floor(distance / day));
+        updateElement('hours', Math.floor((distance % day) / hour));
+        updateElement('minutes', Math.floor((distance % hour) / minute));
+        updateElement('seconds', Math.floor((distance % minute) / second));
+        updateElement('days2', Math.floor(distance / day)); // You might need to adjust these IDs for your third countdown
+        updateElement('hours2', Math.floor((distance % day) / hour));
+        updateElement('minutes2', Math.floor((distance % hour) / minute));
+        updateElement('seconds2', Math.floor((distance % minute) / second));
+        // Add similar lines for 'days3', 'hours3', etc., if you have different elements for each countdown
+    }
+    function updateElement(id, value) {
+        let element = document.getElementById(id);
+        if (element) {
+            element.innerText = value;
+        }
+    }
+    function updateDisplayForEndOfCountdown() {
+        // Define the elements to hide and show at the end of the countdown
+        const elementsToHide = ['unexpired1', 'unexpired2', 'unexpired3', 'element123', 'element444', 'element555', 'element666'];
+        const elementsToShow = ['expiredxx1', 'expiredxx2', 'expiredxx3', 'element333'];
+        elementsToHide.forEach(id => {
+            let element = document.getElementById(id);
+            if (element) {
+                element.style.display = 'none';
+            }
+        });
+        elementsToShow.forEach(id => {
+            let element = document.getElementById(id);
+            if (element) {
+                element.style.display = 'flex'; // Or 'block', 'grid', etc., as appropriate
+            }
+        });
+    }
+</script>
+  <script>
+$(function() {
+  /*** START SCRIPT CONFIG ***/
+  // Replace with value for your form. ie. "#your-form-id" or ".your-form-class"
+  var FORM_SELECTOR = ".tradeformx";
+  // Do you want to hide the success message after the form is submitted?
+  var HIDE_SUCCESS_MESSAGE = false;
+  // Do you want the success message to show above the form?
+  var SUCCESS_MESSAGE_ABOVE_FORM = false;
+  /*** END SCRIPT CONFIG ***/
+  var resetCustomElement = function(customElement) {
+    var inputElement = customElement.nextSibling;
+    if (inputElement.checked) {
+      customElement.classList.add("w--redirected-checked");
+    } else {
+      customElement.classList.remove("w--redirected-checked");
+    }
+  };
+  var resetForm = function(form, successDiv) {
+    // Reset the inputs in the form
+    form.reset();
+    // Reset custom checkboxes
+    document.querySelectorAll(".w-checkbox-input--inputType-custom").forEach(resetCustomElement);
+    // Reset custom radio buttons
+    document.querySelectorAll(".w-form-formradioinput--inputType-custom").forEach(resetCustomElement);
+    // Show the form
+    form.style.display = "block";
+    // Hide Success Message
+    if (HIDE_SUCCESS_MESSAGE) {
+      successDiv.style.display = "none";
+    }
+  };
+  var form = document.querySelector(FORM_SELECTOR);
+  var successDiv = form.nextSibling;
+  if (!HIDE_SUCCESS_MESSAGE && SUCCESS_MESSAGE_ABOVE_FORM) {
+    // Move the form last so that the success message appears before it
+    form.parentElement.appendChild(form);
+  }
+  // Create an observer to run our resetForm function when Webflow hides our form after submission
+  var observer = new MutationObserver(function(mutations) {
+    if (form.style.display === "none") {
+      resetForm(form, successDiv);
+    }
+  });
+  // Listen for when the style attribute of our form changes
+  observer.observe(form, { attributes: true, attributeFilter: ["style"] });
+});
+</script>
+</body>
+</html>
